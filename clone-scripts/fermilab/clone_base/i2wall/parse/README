@@ -1,0 +1,4 @@
+When a set of runs is done, run:
+
+./parse_allrow.sh ../i2wallf21l16t48b6586m0194_ .sh-* 1000 3000 40 input.dat 500
+

@@ -1,0 +1,11 @@
+When a set of runs is done, run:
+
+./parse_allrow.sh ../discf8l16t32b50m060_ .sh-* 260 1250 10 input.dat 500
+
+Where you modify the 'm060' if you're doing a partially quenched run.
+It will spit out correlator files in the subdirectory 'corr'.
+
+Note that it will override what's in corr. If you want to change that, you
+can modify the file input.dat: the first column specifies the extension of
+the files in the 'corr' subdirectory, so you could change corr.i2pi to
+corr.i2pi_m080 if you did a quenched run at the mass 0.080, for example.
