@@ -6,7 +6,7 @@
 
 # These scripts based on scripts by owitzel
 
-#    1)   qsub -N gcrf8l24t48b48m00889_500.sh gluecorr.sh
+#    1)   qsub -N gfixf8l24t48b48m00889_500.sh gaugefix.sh
 
 ### create files with read permissions for everyone 
 umask 022
@@ -56,7 +56,7 @@ echo "--------------------------------"
 if  [ $dflag -ne 0 ] ; then
    BINARY='/lqcdproj/LSD/8f/install/GLU/bin/GLU '
 elif  [ $bflag -ne 0 ] ; then
-   BINARY='/lqcdproj/LSD/8f/install/GLU/bin/GLU ' # untested
+   BINARY='/lqcdproj/LSD/8f/install/bc/GLU/bin/GLU '
 elif [ $pflag -ne 0 ] ; then
    BINARY='/lqcdproj/LSD/8f/install/GLU/bin/GLU ' # untested
 fi
@@ -111,12 +111,12 @@ echo "==============================================================="
 
 # Command:
 
-cmd="${BINARY} -c ${input} -i /lqcdproj/LSD/8f/${short_runname}/config/config.${config}.lime -o /lqcdproj/LSD/8f/${short_runname}/config_gfix/config.${config}.gfix.lime"
+cmd="${BINARY} -c ${input} -i /lqcdproj/LSD/8f/QHMC/${short_runname}/config/config.${config}.lime -o /lqcdproj/LSD/8f/QHMC/${short_runname}/config_gfix/config.${config}.gfix.lime"
 
 echo $cmd
 
 # Output filename doesn't matter!
-${BINARY} -c ${input} -i /lqcdproj/LSD/8f/${short_runname}/config/config.${config}.lime -o /lqcdproj/LSD/8f/${short_runname}/config_gfix/config.${config}.gfix.lime
+${BINARY} -c ${input} -i /lqcdproj/LSD/8f/QHMC/${short_runname}/config/config.${config}.lime -o /lqcdproj/LSD/8f/QHMC/${short_runname}/config_gfix/config.${config}.gfix.lime
 
 
 echo "done"
