@@ -35,3 +35,7 @@ find ${ensemble}/decay -type d -exec chmod 775 {} +
 
 # Make the files user+group read/writable.
 find ${ensemble}/decay -type f -exec chmod 664 {} +
+
+chmod 775 ${ensemble}/decay/parse/*.sh
+
+

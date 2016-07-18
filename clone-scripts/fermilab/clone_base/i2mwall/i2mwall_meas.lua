@@ -14,7 +14,7 @@ require 'run'
 local nx = :L: -- Lattice spatial dimension
 local nt = :T: -- Lattice temporal dimension
 local mass = 0.:MASS: -- Light quark mass.
-local inlat = "../config_gfix/config.:CONFIG:.gfix.lime" -- Input configuration
+local inlat = "../config/config.:CONFIG:.lime" -- Input configuration
 local gfix_prec = 1e-7 -- Max residual of gauge fixing.
 local gfix_max = 4000 -- Maximum number of gauge fixing steps.
 local cg_prec = 1e-7 -- Max residual of CG.
@@ -28,8 +28,7 @@ local gfix_or = 1.75 -- The overrelaxation parameter for gauge fixing.
 -- not sure if that's a problem or if gauge fixing just takes a really long time
 -- ESW: gauge fixing, as I implemented it in FUEL, just takes a really long time.
 -- I use a separate code to do it now.
-local dogaugefix = 1; -- if you want to fix to coulomb gauge, set to 1.
-                      -- Not strictly necessary, they're already gfixed. 
+local dogaugefix = 0; -- intentionally don't gauge fix! 
 
 printf("inlat = %s\n", inlat)
 
@@ -99,7 +98,6 @@ if dogaugefix == 1 then
     t0 = qopqdp.dtime() - t0
     printf("Coulgauge meas time: %g\n", t0)
 end
-
 
 -- Prepare a smearing setting. This has been verified to be consistent
 -- with MILC. Then smear the gauge field!

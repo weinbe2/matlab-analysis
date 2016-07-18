@@ -35,3 +35,7 @@ find ${ensemble}/i2wall -type d -exec chmod 775 {} +
 
 # Make the files user+group read/writable.
 find ${ensemble}/i2wall -type f -exec chmod 664 {} +
+
+chmod 775 ${ensemble}/i2wall/parse/*.sh
+
+

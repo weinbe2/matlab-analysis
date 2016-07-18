@@ -35,3 +35,7 @@ find ${ensemble}/disconnected -type d -exec chmod 775 {} +
 
 # Make the files user+group read/writable.
 find ${ensemble}/disconnected -type f -exec chmod 664 {} +
+
+chmod 775 ${ensemble}/disconnected/parse/*.sh
+
+
