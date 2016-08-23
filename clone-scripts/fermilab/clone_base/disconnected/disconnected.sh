@@ -60,7 +60,8 @@ if  [ $dflag -ne 0 ] ; then
    export PATH=/usr/local/gcc-4.5.1/bin:/usr/local/mvapich2/bin:$PATH
 
    MPIRUN="/usr/local/mvapich2/bin/mpirun "
-   NUMA="/usr/local/mvapich2/bin/numa_32_mv2 "
+   #NUMA="/usr/local/mvapich2/bin/numa_32_mv2"
+   NUMA=""
 
 elif  [ $bflag -ne 0 ] ; then
 
@@ -72,7 +73,8 @@ elif  [ $bflag -ne 0 ] ; then
 
    MPIRUN="/usr/local/mvapich2/bin/mpirun "
    source /usr/local/mvapich2/etc/mvapich2.conf.sh
-   NUMA="/usr/local/mvapich2/bin/numa_32_mv2"
+   #NUMA="/usr/local/mvapich2/bin/numa_32_mv2"
+   NUMA=""
    
 elif [ $pflag -ne 0 ] ; then
    BINARY='/lqcdproj/LSD/8f/bin/USQCD/install_pi0/qhmc/bin/qhmc  '
