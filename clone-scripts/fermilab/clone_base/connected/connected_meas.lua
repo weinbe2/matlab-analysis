@@ -633,33 +633,33 @@ printf("BEGIN_SPECTRUM\n");
 
 --This is all to reproduce what MILC does.
 printf("STARTPROP\n");
-printf("MASSES:\t%.6e\t%.6e\n",mass, mass);
+printf("MASSES:\t%.15e\t%.15e\n",mass, mass);
 printf("SOURCE: RANDOM_WALL\n");
 printf("SINKS: POINT_KAON_5 WALL_KAON_5\n");
 
 for i = 1,#(pion_fpi_ptp) do
-	printf("%i %.6e %f %.6e %f\n", i-1, pion_fpi_ptp[i], 0.0, pion_fpi_ptw[i], 0.0);
+	printf("%i %.15e %f %.15e %f\n", i-1, pion_fpi_ptp[i], 0.0, pion_fpi_ptw[i], 0.0);
 end
 
 printf("ENDPROP\n");
 
 -- This is all to reproduce what MILC does.
 printf("STARTPROP\n");
-printf("MASSES:\t%.6e\t%.6e\n",mass, mass);
+printf("MASSES:\t%.15e\t%.15e\n",mass, mass);
 printf("SOURCE: EVEN_WALL\n");
 printf("SINKS: PION_PS PION_SC\n");
 --printf("Local Pions\n");
 --printf("\tPion5\t\tPion5_4\n");
 
 for i = 1,#(pion_ps_ck) do
-	printf("%i %.6e %f %.6e %f\n", i-1, pion_ps_ck[i], 0.0, pion_4_ck[i], 0.0);
+	printf("%i %.15e %f %.15e %f\n", i-1, pion_ps_ck[i], 0.0, pion_4_ck[i], 0.0);
 end
 
 
 printf("ENDPROP\n");
 
 printf("STARTPROP\n");
-printf("MASSES:\t%.6e\t%.6e\n",mass, mass);
+printf("MASSES:\t%.15e\t%.15e\n",mass, mass);
 printf("SOURCE: EVEN_WALL\n");
 printf("SINKS: NUCLEON\n");
 
@@ -668,13 +668,13 @@ printf("SINKS: NUCLEON\n");
 --printf("\tNucleon\n");
 
 for i = 1,#(nucleon_ck) do
-printf("%i %.6e %f\n", i-1, nucleon_ck[i].r, 0.0);
+printf("%i %.15e %f\n", i-1, nucleon_ck[i].r, 0.0);
 end
 
 printf("ENDPROP\n");
 
 printf("STARTPROP\n");
-printf("MASSES:\t%.6e\t%.6e\n",mass, mass);
+printf("MASSES:\t%.15e\t%.15e\n",mass, mass);
 printf("SOURCE: EVENANDODD_WALL\n");
 printf("SINKS: PION_PS PION_SC PION_i5 PION_ij\n");
 
@@ -683,22 +683,22 @@ printf("SINKS: PION_PS PION_SC PION_i5 PION_ij\n");
 --printf("\tPion5\tPion5_4\tPion_i5\tPion_ij\n");
 
 for i = 1,#(p5) do
-	printf("%i %.6e %f %.6e %f %.6e %f %.6e %f\n", i-1, p5[i], 0.0, p5_g4[i], 0.0, pion_i5[i], 0.0, pion_ij[i], 0.0);
+	printf("%i %.15e %f %.15e %f %.15e %f %.15e %f\n", i-1, p5[i], 0.0, p5_g4[i], 0.0, pion_i5[i], 0.0, pion_ij[i], 0.0);
 end
 
 printf("STARTPROP\n");
-printf("MASSES:\t%.6e\t%.6e\n",mass, mass);
+printf("MASSES:\t%.15e\t%.15e\n",mass, mass);
 printf("SOURCE: EVENANDODD_WALL\n");
 printf("SINKS: RHO_0 RHO_is RHO_ij RHO_i5\n");
 
 for i = 1,#(rho_0) do
-	printf("%i %.6e %f %.6e %f %.6e %f %.6e %f\n", i-1, rho_0[i], 0.0, rho_is[i], 0.0, rho_ij[i], 0.0, rho_i5[i], 0.0);
+	printf("%i %.15e %f %.15e %f %.15e %f %.15e %f\n", i-1, rho_0[i], 0.0, rho_is[i], 0.0, rho_ij[i], 0.0, rho_i5[i], 0.0);
 end
 
 printf("ENDPROP\n");
 
 printf("STARTPROP\n");
-printf("MASSES:\t%.6e\t%.6e\n",mass, mass);
+printf("MASSES:\t%.15e\t%.15e\n",mass, mass);
 printf("SOURCE: EVENANDODD_WALL\n");
 printf("SINKS: NUCLEON DELTA\n");
 
@@ -707,7 +707,7 @@ printf("SINKS: NUCLEON DELTA\n");
 --printf("\tNucleon\tDelta\n");
 
 for i = 1,#(nucleon) do
-	printf("%i %.6e %f %.6e %f\n", i-1, nucleon[i].r, 0.0, delta[i].r, 0.0);
+	printf("%i %.15e %f %.15e %f\n", i-1, nucleon[i].r, 0.0, delta[i].r, 0.0);
 end
 
 printf("ENDPROP\n");
