@@ -1,6 +1,5 @@
--- ESW 09-24-2014
--- This standalone file gauge fixes a configuration to coulomb gauge, 
--- then measure various spectral quantities.
+-- ESW 2015-06-20
+-- This standalone file computes propagators relevant for decay constant calculations.
 
 require 'common'
 require 'smear'
